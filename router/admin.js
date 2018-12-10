@@ -10,7 +10,12 @@ const products = []
 
 router.get("/add-product", (req, res, next) => 
 {
-    res.render("add-product", {title: "Add Product", page: "add-product"})
+    res.render("add-product", {
+        title: "Add Product", 
+        page: "add-product",
+        activeAddProduct: true,
+        layout: false
+    })
 })
 
 router.post("/product", (req, res, next) => 
